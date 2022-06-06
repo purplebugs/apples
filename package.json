@@ -1,0 +1,23 @@
+{
+  "name": "apples",
+  "version": "1.0.0",
+  "description": "Exercise for practising Elasticsearch",
+  "main": "server/main.js",
+  "dependencies": {
+    "@elastic/elasticsearch": "^8.2.1",
+    "dotenv": "^16.0.1"
+  },
+  "scripts": {
+    "start": "node server/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/purplebugs/apples.git"
+  },
+  "author": "Anita Lipsky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/purplebugs/apples/issues"
+  },
+  "homepage": "https://github.com/purplebugs/apples#readme"
+}

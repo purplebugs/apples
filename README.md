@@ -292,3 +292,21 @@ GET grocery-store/_search
 ```
 
 ## 4 JavaScript app
+
+API is located at [/server](server)
+
+### Installation
+
+```
+npm install
+```
+
+### Start app
+
+```
+npm start
+```
+
+### Usage
+
+Work in progress - not yet implemented
