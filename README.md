@@ -310,6 +310,7 @@ Precondition:
 ### Use app 🍎
 
 - Navigate to [http://localhost:3030/](http://localhost:3030/)
+- http://localhost:3030/api/list/categories
 
 ### Status 🚜
 
@@ -319,8 +320,8 @@ npm start
 
 Done:
 
-- Skeleton middleware available at localhost:3030/
 - Outputs result of a query to console
+- Skeleton middleware and links available as per "Use app 🍎" section
 
 Not done:
 
