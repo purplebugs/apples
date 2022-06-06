@@ -2,6 +2,10 @@
 
 const dotenv = require("dotenv").config();
 
+// initialise server
+const express = require("express");
+const port = 3030;
+
 const { Client } = require("@elastic/elasticsearch");
 const client = new Client({
   cloud: {
@@ -11,6 +15,20 @@ const client = new Client({
     username: process.env.ELASTIC_AUTH_USERNAME,
     password: process.env.ELASTIC_AUTH_PASSWORD,
   },
+});
+
+// create an express app
+const app = express();
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});
+
+// app.use("/", express.static("static"));
+
+// respond with friendly message when a GET request is made to the homepage
+app.get("/", (req, res) => {
+  res.send("🍎 I love apples!");
 });
 
 async function run() {

@@ -2,7 +2,7 @@
 
 Elasticsearch apples exercise
 
-## Create index with mappings
+## 1. Create index with mappings
 
 ```
 
@@ -112,7 +112,7 @@ GET grocery-store/_mapping
 
 ```
 
-## Individual searches
+## 2. Individual searches
 
 ### 2.1
 
@@ -268,7 +268,7 @@ GET grocery-store/_search
 
 ```
 
-## Aggregation
+## 3. Aggregation
 
 ### 3
 
@@ -291,21 +291,27 @@ GET grocery-store/_search
 
 ```
 
-## 4 JavaScript app
+## 4. JavaScript app
 
 API is located at [/server](server)
 
-### Installation
+### Install app 🐣
 
 ```
 npm install
 ```
 
-### Precondition
+### Start app 🚀
 
-Create index and index data manually in Elastic cloud devtools using commands above
+Precondition:
 
-### Start app
+- Create index and index data manually in Elastic cloud devtools using commands in part 1
+
+### Use app 🍎
+
+- Navigate to [http://localhost:3030/](http://localhost:3030/)
+
+## Status 🚜
 
 ```
 npm start
@@ -313,6 +319,7 @@ npm start
 
 Done:
 
+- Skeleton middleware available at localhost:3030/
 - Outputs result of a query to console
 
 Not done:
