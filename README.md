@@ -303,9 +303,11 @@ npm install
 
 ### Start app 🚀
 
-Precondition:
+- Precondition: Create index and index data manually in Elastic cloud devtools using commands in part 1
 
-- Create index and index data manually in Elastic cloud devtools using commands in part 1
+```
+npm start
+```
 
 ### Use app 🍎
 
@@ -314,10 +316,6 @@ Precondition:
 
 ### Status 🚜
 
-```
-npm start
-```
-
 Done:
 
 - Outputs result of a query to console
@@ -325,4 +323,5 @@ Done:
 
 Not done:
 
+- Build out API
 - Build UI to show search results
