@@ -280,7 +280,7 @@ GET grocery-store/_search
 {
   "size": 0,
   "aggs": {
-    "NAME": {
+    "total_products_per_category": {
       "terms": {
         "field": "category",
         "size": 10
