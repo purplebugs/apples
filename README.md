@@ -301,12 +301,20 @@ API is located at [/server](server)
 npm install
 ```
 
+### Precondition
+
+Create index and index data manually in Elastic cloud devtools using commands above
+
 ### Start app
 
 ```
 npm start
 ```
 
-### Usage
+Done:
 
-Work in progress - not yet implemented
+- Outputs result of a query to console
+
+Not done:
+
+- Build UI to show search results

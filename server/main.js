@@ -14,40 +14,46 @@ const client = new Client({
 });
 
 async function run() {
-  // Let's start by indexing some data
-  await client.index({
-    index: "game-of-thrones",
-    document: {
-      character: "Ned Stark",
-      quote: "Winter is coming.",
-    },
-  });
-
-  await client.index({
-    index: "game-of-thrones",
-    document: {
-      character: "Daenerys Targaryen",
-      quote: "I am the blood of the dragon.",
-    },
-  });
-
-  await client.index({
-    index: "game-of-thrones",
-    document: {
-      character: "Tyrion Lannister",
-      quote: "A mind needs books like a sword needs a whetstone.",
-    },
-  });
-
-  // here we are forcing an index refresh, otherwise we will not
-  // get any result in the consequent search
-  await client.indices.refresh({ index: "game-of-thrones" });
-
   // Let's search!
   const result = await client.search({
-    index: "game-of-thrones",
+    index: "grocery-store",
     query: {
-      match: { quote: "winter" },
+      bool: {
+        should: [
+          {
+            prefix: {
+              "title.keyword": {
+                value: "epler",
+                case_insensitive: true,
+                boost: 10,
+              },
+            },
+          },
+          {
+            match: {
+              "title.lowercase_exactwords": {
+                query: "epler",
+                boost: 8,
+              },
+            },
+          },
+          {
+            match: {
+              "title.norwegian": {
+                query: "epler",
+                boost: 4,
+              },
+            },
+          },
+          {
+            match: {
+              "title.compound_words": {
+                query: "epler",
+              },
+            },
+          },
+        ],
+      },
     },
   });
 
