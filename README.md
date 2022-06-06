@@ -1,8 +1,8 @@
-# apples
+# 🍎 🍏 🍎 🍏 apples 🍎 🍏 🍎 🍏
 
 Elasticsearch apples exercise
 
-## 1. Create index with mappings
+## 1. Create index with mappings 📝
 
 ```
 
@@ -112,7 +112,7 @@ GET grocery-store/_mapping
 
 ```
 
-## 2. Individual searches
+## 2. Individual searches 🔦
 
 ### 2.1
 
@@ -268,7 +268,7 @@ GET grocery-store/_search
 
 ```
 
-## 3. Aggregation
+## 3. Aggregation 📊
 
 ### 3
 
@@ -291,7 +291,7 @@ GET grocery-store/_search
 
 ```
 
-## 4. JavaScript app
+## 4. JavaScript app 👾
 
 API is located at [/server](server)
 
@@ -311,7 +311,7 @@ Precondition:
 
 - Navigate to [http://localhost:3030/](http://localhost:3030/)
 
-## Status 🚜
+### Status 🚜
 
 ```
 npm start
