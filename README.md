@@ -214,7 +214,7 @@ GET grocery-store/_search
               "title.norwegian",
               "title.compound_words"
             ],
-            "type": "best_fields"
+            "type": "most_fields"
           }
         }
       ]
