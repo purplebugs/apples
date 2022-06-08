@@ -270,6 +270,38 @@ GET grocery-store/_search
 
 ```
 
+### More ranking: "eple" with certain category and subCategory higher than other products
+
+```
+# Match "eple" in phrase only (to be continued)
+
+GET grocery-store/_search
+{
+  "query": {
+    "bool": {
+      "should": [
+        {
+          "match": {
+            "title.norwegian": {
+              "query": "epler"
+            }
+          }
+        }
+      ],
+      "must_not": [
+        {
+          "match": {
+            "title.lowercase_exactwords": {
+              "query": "epler"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+```
+
 ## 3. Aggregation 📊
 
 ### 3
