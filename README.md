@@ -114,6 +114,8 @@ GET grocery-store/_mapping
 
 ## 2. Individual searches 🔦
 
+All are case insensitive
+
 ### 2.1
 
 ```
@@ -155,7 +157,7 @@ GET grocery-store/_search/
 ### 2.3
 
 ```
-# products with singular form "eple"
+# includes "epler" and products with singular form "eple"
 
 GET grocery-store/_search
 {
@@ -172,7 +174,7 @@ GET grocery-store/_search
 
 ```
 
-# compound words
+# includes "epler", "eple" and compound words containing "eple"
 
 GET grocery-store/_search
 {
