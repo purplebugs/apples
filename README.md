@@ -273,17 +273,31 @@ GET grocery-store/_search
 ### More ranking: "eple" with certain category and subCategory higher than other products
 
 ```
-# Match "eple" in phrase only (to be continued)
+# Match "eple" in phrase with specified category and subCategory, do not match on "epler"
 
 GET grocery-store/_search
 {
   "query": {
     "bool": {
-      "should": [
+      "must": [
         {
           "match": {
             "title.norwegian": {
               "query": "epler"
+            }
+          }
+        },
+                {
+          "match": {
+            "category": {
+              "query": "Juice og fruktdrikker"
+            }
+          }
+        },
+                {
+          "match": {
+            "subCategory": {
+              "query": "Frukt- og bærjuice"
             }
           }
         }
