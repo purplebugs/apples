@@ -349,6 +349,16 @@ API is located at [/server](server)
 npm install
 ```
 
+### First time users only 🪴
+
+- Create a .env file in the root of your project containing the elastic KEYS
+
+```
+ELASTIC_AUTH_USERNAME="YOURSECRETKEYGOESHERE"
+ELASTIC_AUTH_PASSWORD="YOURSECRETKEYGOESHERE"
+```
+
+
 ### Start app 🚀
 
 - Precondition: Create index and index data manually in Elastic cloud devtools using commands in part 1
